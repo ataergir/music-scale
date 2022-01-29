@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="btn-wrapper">
+        <div class="notes-btn-wrapper flex-btn">
+            <button class="note-btn" data-note="C" onclick="getNote(this)">C</button>
+            <button class="note-btn" data-note="D" onclick="getNote(this)">D</button>
+            <button class="note-btn" data-note="E" onclick="getNote(this)">E</button>
+            <button class="note-btn" data-note="F" onclick="getNote(this)">F</button>
+            <button class="note-btn" data-note="G" onclick="getNote(this)">G</button>
+            <button class="note-btn" data-note="A" onclick="getNote(this)">A</button>
+            <button class="note-btn" data-note="B" onclick="getNote(this)">B</button>
+        </div>
+
+        <div class="sharp-flat-btn-wrapper flex-btn">
+            <button class="pitch-btn" data-pitch="flat" onclick="getPitch(this)">♭</button>
+            <button class="pitch-btn" data-pitch="natural" onclick="getPitch(this)">♮</button>
+            <button class="pitch-btn" data-pitch="sharp" onclick="getPitch(this)">#</button>
+        </div>
+
+        <div class="scale-btn-wrapper flex-btn">
+            <button class="scale-btn" data-scale="major" onclick="getScale(this)">maj</button>
+            <button class="scale-btn" data-scale="minor" onclick="getScale(this)">min</button>
+        </div>
+
+        <div class="flex-btn">
+            <button class="invertButton" onclick="invert()">dark</button>
+            <a href="https://github.com/iloveonions" target="_blank" rel="noopener noreferrer" ><img src="img/github.png" class="link" alt=""></a>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <div class="welcome-text"><span class="welcome">Welcome,</span><br>
+            please choose your scale. <br>
+            Feel free to contact me on GitHub for anyfeedback! <br><a href="https://github.com/iloveonions" target="_blank" rel="noopener noreferrer">@iloveonions</a><br>
+            Hope you'll have fun using this tool :)
+        </div>
+        <!--
+            <div class="note-info">
+
+                <div class="note-letter">
+                    C
+                </div>
+
+                <div class="sharp-flat">
+                    #
+                </div>
+    
+                <div class="maj-min">
+                    min
+                </div>
+
+                <div class="roman-numeral">
+                    I
+                </div>
+
+                <div class="alternative-note">
+                    Cmin7
+                </div>
+            </div>
+
+            <div class="note-info">
+
+                <div class="note-letter">
+                    D
+                </div>
+
+                <div class="sharp-flat">
+                    #
+                </div>
+    
+                <div class="maj-min">
+                    maj
+                </div>
+                <div class="roman-numeral">
+                    I
+                </div>
+                <div class="alternative-note">
+                    Dmaj7
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
