@@ -1,6 +1,8 @@
 # music-scale
  Javascript tool that will get you any scale in three clicks!
  Grab your instrument and try this! 🎸
+ 
+ ![Capture](https://user-images.githubusercontent.com/66826811/151677845-45e56324-400b-4909-a998-9a7b13ef870f.PNG)
 
 You just have to choose the note (e.g C and ♭ / ♮ / #) and the scale and it'll give you all the notes and the chords in it!
 Once the chords are displayed, you can click on any of them to change their color (e.g if you found a nice progression)
