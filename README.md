@@ -1,6 +1,4 @@
 # music-scale
- (MOBILE VERSION COMING SOON)
-
  Javascript tool that will get you any scale in three clicks! 
  Grab your instrument and try this! 🎸
  
