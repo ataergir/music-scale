@@ -71,6 +71,7 @@ header{
     margin: auto;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
@@ -173,4 +174,78 @@ header{
 
 .darkbg{
     background-color: $dark-color;
+}
+
+@media (max-width: 800px){
+    header{
+        position: relative;
+        gap: 0.2rem 0.5rem;
+    }
+    .main-wrapper{
+        flex-direction: column;
+        margin: auto;
+        flex-wrap: wrap;
+        .welcome-text{
+            .welcome{
+                font-size: 2rem;
+                margin: 0;
+            }
+        }
+        .note-info{
+            display: flex;
+            align-items: stretch;
+            align-content: stretch;
+            justify-items: center;
+            width: 70%;
+            padding: 0;
+            > * {
+                justify-self: stretch;
+                margin: auto;
+                padding: 0;
+                margin: 0;
+            }
+            .note-letter{
+                font-size: $xxl;
+                width: 25%;
+            }
+            .sharp-flat {
+                font-size: $m;
+                justify-self: stretch;
+                width: 10%;
+            }
+            
+            .maj-min {
+                font-size: $m;
+                width: 25%;
+            }
+            
+            .roman-numeral {
+                font-size: $l;
+                width: 20%;
+            }
+            .alternative-note {
+                font-size: $s;
+                width: 20%;
+                background-color: #ddd;
+            }
+        }
+    }
+}
+
+@media(max-height: 700px) and (max-width:650px){
+    html{
+        height: auto;
+        width: auto;
+        overflow-x: hidden;
+    }
+    .main-wrapper{
+        position: relative;
+        margin-top: 2rem;
+        height: auto;
+        .note-info{
+            .note-letter{
+                font-size: 2rem;
+            }
+        }
+    }
 }
