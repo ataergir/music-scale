@@ -13,4 +13,4 @@ Once the chords are displayed, you can click on any of them to change their colo
 
 You can add any scale by addind a button in the html code with _data-scale:'scale'_  and adding the corresponding arrays in the JS code with the correct syntax ("data-scale" + Steps / Chords / Roman / Seventh [] )
 
-I'll add some soon, I'm currently working on another project 🧛
+I'll add some soon, I'm currently working on another project! 🧛
