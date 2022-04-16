@@ -95,9 +95,11 @@ header{
         text-align: center;
     }
     opacity: 0;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-name: slideFromTop;
+    // animation-duration: 3s;
+    // animation-fill-mode: forwards;
+    // animation-name: slideFromTop;
+
+    animation: slideFromTop 3s forwards;
 }
 
 .note-info:hover {
@@ -206,12 +208,13 @@ header{
             }
             .note-letter{
                 font-size: $xxl;
-                width: 25%;
+                width: 10%;
+                padding-left: 18%;
             }
             .sharp-flat {
                 font-size: $m;
                 justify-self: stretch;
-                width: 10%;
+                width: 7%;
             }
             
             .maj-min {

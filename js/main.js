@@ -4,7 +4,7 @@ var letters = ["C", "D", "E", "F", "G", "A", "B", "C"];
 //! Respect the syntax for these arrays: "data-scale" + Steps / Chords / Roman / Seventh !!!
 var majorSteps = [0, 2, 2, 1, 2, 2, 2];
 var minorSteps = [0, 2, 1, 2, 2, 1, 2];
-var bluesSteps = [0, 3, 2, 1, 1, 3, 2];
+// var bluesSteps = [0, 3, 2, 1, 1, 3, 2];
 
 var majorChords = ["maj","min","min","maj","maj","min","dim"];
 var minorChords = ["min","dim","maj","min","min","maj","maj"];
@@ -53,13 +53,6 @@ function getPitch(d) {
 
 function getScale(d) {
     scaleInput = d.getAttribute("data-scale");
-    /*
-    if (scaleInput == "major"){
-        steps = majorSteps;
-    }else if (scaleInput == "minor"){
-        steps = minorSteps;
-    }
-    */
     steps = eval(scaleInput + "Steps");
 
     scaleButtons.forEach(function(e){
@@ -100,7 +93,6 @@ function findNotesinScale(index){
         notesInScale[i] = allNotes[index + steps[i]];
         index += steps[i];
     }
-    console.log("notes in scale: " + notesInScale);
     scaleToHTML(notesInScale);
 }
 
@@ -112,7 +104,7 @@ function scaleToHTML(notes){
     while (wrapper.firstChild){
         wrapper.lastChild.remove();
     }
-    console.log(notes);
+
     counter = 0;
     notes.forEach(note =>
         createDiv(note)
@@ -158,39 +150,20 @@ function createDiv(note){
     /////////////////////////////////////////////////////////////////////
     var majMin = document.createElement("div");
     majMin.classList.add("maj-min");
-    /*
-    if(scaleInput == "major"){
-        chord = majorChords[counter];
-    }else if(scaleInput == "minor"){
-        chord = minorChords[counter];
-    }
-    */
     var chord = eval(scaleInput + "Chords" + `[${counter}]`);
     majMin.textContent = chord;
 
     /////////////////////////////////////////////////////////////////////
     var roman = document.createElement("div");
     roman.classList.add("roman-numeral");
-    /*
-    if(scaleInput == "major"){
-        romanNum = majorRoman[counter];
-    }else if(scaleInput == "minor"){
-        romanNum = minorRoman[counter];
-    }
-    */
+
     var romanNum = eval(scaleInput + "Roman" + `[${counter}]`);
     roman.textContent = romanNum;
     
     /////////////////////////////////////////////////////////////////////
     var altern = document.createElement("div");
     altern.classList.add("alternative-note");
-    /*
-    if(scaleInput == "major"){
-        seventhChord = majorSeventh[counter];
-    }else if(scaleInput == "minor"){
-        seventhChord= minorSeventh[counter];
-    }
-    */
+
     var seventhChord = eval(scaleInput + "Seventh" + `[${counter}]`);
     altern.textContent = seventhChord;
     /////////////////////////////////////////////////////////////////////
